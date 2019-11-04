@@ -26,5 +26,5 @@ app.on('ready', () => {
     window.show()
   })
 
-  window.loadURL(`file://${__dirname}/src/renderer/index.html`)
+  window.loadURL(`file://${__dirname}/src/renderer/components/explicacion/index.html`)
 })
