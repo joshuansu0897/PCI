@@ -1,0 +1,23 @@
+{
+  "name": "proyecto",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development electron ./index.js",
+    "lint": "standard",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cross-env": "^6.0.3",
+    "electron": "^7.0.1",
+    "electron-debug": "^3.0.1"
+  },
+  "devDependencies": {
+    "devtron": "^1.4.0",
+    "electron-reload": "^1.5.0",
+    "standard": "^14.3.1"
+  }
+}
