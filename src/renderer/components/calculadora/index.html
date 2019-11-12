@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Revisión Periódica</title>
     <link rel="stylesheet" href="../../../assets/css/photon.min.css">
+    <link rel="stylesheet" href="../../../assets/css/main.css">
     <script src="logic.js" type="text/javascript" charset="utf-8" async defer></script>
 </head>
 
@@ -26,6 +27,10 @@
                             <span class="icon icon-lamp"></span>
                             Ejemplo
                         </a>
+                        <a class="nav-group-item" href="../tablaZ/index.html">
+                            <span class="icon icon-graduation-cap"></span>
+                            Tabla Z
+                        </a>
                         <span class="nav-group-item active">
                             <span class="icon icon-share"></span>
                             Calculadora
@@ -33,6 +38,35 @@
                     </nav>
                 </div>
                 <div id="pane" class="pane">
+                    <div class="main-content">
+                        <h1 class="title"><strong>Calculaldora</strong></h1>
+
+                        <form id="form">
+                            Demanda Diaria:<br>
+                            <input type="number" name="demandaDia" id="demandaDia" placeholder="10">
+                            <br>
+                            Desviacion Estandar:<br>
+                            <input type="number" name="desvEstandar" id="desvEstandar" placeholder="3">
+                            <br>
+                            Nivel Stock:<br>
+                            <input type="number" name="nStock" id="nStock" placeholder="2.05">
+                            <br>
+                            Inventario Inicial:<br>
+                            <input type="number" name="invInicial" id="invInicial" placeholder="150">
+                            <br>
+                            Tiempo Reposición:<br>
+                            <input type="number" name="tiempoReposicion" id="tiempoReposicion" placeholder="14">
+                            <br>
+                            Tiempo Revisión:<br>
+                            <input type="number" name="tiempoRevision" id="tiempoRevision" placeholder="30">
+                            <br><br>
+                            <input id="submit" type="submit" value="submit">
+                        </form>
+
+                        <p class="text">
+                            <strong id="response"></strong>
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
