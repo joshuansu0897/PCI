@@ -8,6 +8,10 @@
     <title>Revisión Periódica</title>
     <link rel="stylesheet" href="../../../assets/css/photon.min.css">
     <link rel="stylesheet" href="../../../assets/css/main.css">
+
+    <script src="../../../assets/js/sweetalert2.all.min.js"></script>
+    <link rel="stylesheet" href="../../../assets/css/sweetalert2.min.css">
+
     <script src="logic.js" type="text/javascript" charset="utf-8" async defer></script>
 </head>
 
@@ -43,22 +47,22 @@
 
                         <form id="form">
                             Demanda Diaria:<br>
-                            <input type="number" name="demandaDia" id="demandaDia" placeholder="10">
+                            <input type="number" id="demandaDia" step="0.001" placeholder="10">
                             <br>
                             Desviacion Estandar:<br>
-                            <input type="number" name="desvEstandar" id="desvEstandar" placeholder="3">
+                            <input type="number" id="desvEstandar" step="0.001" placeholder="3">
                             <br>
                             Nivel Stock:<br>
-                            <input type="number" name="nStock" id="nStock" placeholder="2.05">
+                            <input type="number" id="nStock" step="0.001" placeholder="2.05">
                             <br>
                             Inventario Inicial:<br>
-                            <input type="number" name="invInicial" id="invInicial" placeholder="150">
+                            <input type="number" id="invInicial" step="0.001" placeholder="150">
                             <br>
                             Tiempo Reposición:<br>
-                            <input type="number" name="tiempoReposicion" id="tiempoReposicion" placeholder="14">
+                            <input type="number" id="tiempoReposicion" step="0.001" placeholder="14">
                             <br>
                             Tiempo Revisión:<br>
-                            <input type="number" name="tiempoRevision" id="tiempoRevision" placeholder="30">
+                            <input type="number" id="tiempoRevision" step="0.001" placeholder="30">
                             <br><br>
                             <input id="submit" type="submit" value="submit">
                         </form>
