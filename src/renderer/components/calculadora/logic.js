@@ -1,11 +1,11 @@
 'use strict'
-const submitFormButton = document.getElementById('form')
-const responseText = document.getElementById('response')
+let submitFormButton = document.getElementById('form')
+let responseText = document.getElementById('response')
 
 submitFormButton.addEventListener('submit', (event) => {
   event.preventDefault()
 
-  const demandaDia = document.getElementById('demandaDia').value
+  let demandaDia = document.getElementById('demandaDia').value
   if (!demandaDia) {
     Swal.fire({
       title: 'Error',
@@ -14,8 +14,9 @@ submitFormButton.addEventListener('submit', (event) => {
     })
     return
   }
+  demandaDia = Number(demandaDia)
 
-  const desvEstandar = document.getElementById('desvEstandar').value
+  let desvEstandar = document.getElementById('desvEstandar').value
   if (!desvEstandar) {
     Swal.fire({
       title: 'Error',
@@ -24,8 +25,9 @@ submitFormButton.addEventListener('submit', (event) => {
     })
     return
   }
+  desvEstandar = Number(desvEstandar)
 
-  const nStock = document.getElementById('nStock').value
+  let nStock = document.getElementById('nStock').value
   if (!nStock) {
     Swal.fire({
       title: 'Error',
@@ -34,8 +36,9 @@ submitFormButton.addEventListener('submit', (event) => {
     })
     return
   }
+  nStock = Number(nStock)
 
-  const invInicial = document.getElementById('invInicial').value
+  let invInicial = document.getElementById('invInicial').value
   if (!invInicial) {
     Swal.fire({
       title: 'Error',
@@ -44,8 +47,9 @@ submitFormButton.addEventListener('submit', (event) => {
     })
     return
   }
+  invInicial = Number(invInicial)
 
-  const tiempoReposicion = document.getElementById('tiempoReposicion').value
+  let tiempoReposicion = document.getElementById('tiempoReposicion').value
   if (!tiempoReposicion) {
     Swal.fire({
       title: 'Error',
@@ -54,8 +58,9 @@ submitFormButton.addEventListener('submit', (event) => {
     })
     return
   }
+  tiempoReposicion = Number(tiempoReposicion)
 
-  const tiempoRevision = document.getElementById('tiempoRevision').value
+  let tiempoRevision = document.getElementById('tiempoRevision').value
   if (!tiempoRevision) {
     Swal.fire({
       title: 'Error',
@@ -64,6 +69,18 @@ submitFormButton.addEventListener('submit', (event) => {
     })
     return
   }
+  tiempoRevision = Number(tiempoRevision)
 
-  responseText.innerHTML = demandaDia
+  let tiempos = (tiempoRevision + tiempoReposicion)
+
+  let des = (desvEstandar * desvEstandar)
+  des = Math.ceil(des)
+
+  let intervaloSeg = Math.sqrt(tiempos * des)
+  intervaloSeg = intervaloSeg.toFixed(2)
+
+  let total = (demandaDia * tiempos) + (nStock * (intervaloSeg)) - invInicial
+  total = Math.ceil(total)
+
+  responseText.innerHTML = total
 })
