@@ -7,7 +7,8 @@
     "dev": "cross-env NODE_ENV=development electron ./index.js",
     "lint": "standard",
     "pack": "electron-builder --dir",
-    "dist": "electron-builder"
+    "dist": "electron-builder",
+    "dist:win": "electron-packager ./src PCI --platform=win32 --arch=x86_64"
   },
   "author": "",
   "license": "ISC",
@@ -19,12 +20,13 @@
   },
   "dependencies": {},
   "devDependencies": {
+    "cross-env": "^6.0.3",
     "devtron": "^1.4.0",
-    "electron-builder": "^21.2.0",
-    "electron-reload": "^1.5.0",
-    "standard": "^14.3.1",
     "electron": "^7.0.1",
+    "electron-builder": "^21.2.0",
     "electron-debug": "^3.0.1",
-    "cross-env": "^6.0.3"
+    "electron-packager": "^14.1.1",
+    "electron-reload": "^1.5.0",
+    "standard": "^14.3.1"
   }
 }
